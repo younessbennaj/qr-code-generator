@@ -1,0 +1,76 @@
+:root {
+  --blue: #3662e3;
+  --black: #000000;
+  --dark: #111729;
+  --white: #f2f5f9;
+  --grey: #364153;
+}
+
+body {
+  padding: 16px;
+  padding-top: 200px;
+  margin: 0;
+  background-color: #111729;
+  font-family: "Outfit", sans-serif;
+  background-image: url("images/bg-illustration.svg");
+  background-repeat: no-repeat;
+  background-position: right 100px top 100px;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    padding: 0 308px;
+    padding-top: 240px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 32px;
+  width: 200px;
+}
+
+.input-wrapper {
+  border: 1px solid var(--blue);
+  display: flex;
+  background-color: var(--black);
+  border-radius: 16px;
+  padding: 8px 8px 8px 32px;
+}
+
+.input {
+  background-color: var(--black);
+  border: none;
+  flex-grow: 1;
+  color: var(--white);
+}
+.input::placeholder {
+  color: var(--grey);
+}
+
+.input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+}
+
+@media screen and (min-width: 640px) {
+  button {
+    padding: 16px 40px;
+  }
+}

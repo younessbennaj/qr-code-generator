@@ -10,20 +10,47 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="index.js" defer></script>
     <title>QR code generator</title>
   </head>
   <body>
-    <div class="container">
+    <div id="form-container" class="form-container">
       <img class="logo" src="images/logo-qr-generator.svg" alt="logo" />
-      <div class="input-wrapper">
-        <input
-          class="input"
-          placeholder="Enter an url"
-          type="text"
-          name="url"
-          id="url"
-        />
-        <button class="button">QR Code</button>
+      <form id="form">
+        <div class="input-wrapper">
+          <input
+            class="input"
+            placeholder="Enter an url"
+            type="text"
+            name="url"
+            id="url"
+          />
+          <button class="button" type="submit">QR Code</button>
+        </div>
+      </form>
+    </div>
+    <div class="qrcode-container" id="qrcode-container">
+      <div class="qrcode-circle">
+        <div class="qrcode-wrapper">
+          <div id="qrcode"></div>
+        </div>
+      </div>
+      <div class="button-group">
+        <a id="link" href="" download>
+          <button id="download" class="button">
+            <span>Download</span> <img src="images/download.svg" alt="" />
+          </button>
+        </a>
+        <button id="copy" class="button">
+          <span>Share</span> <img src="images/link.svg" alt="" />
+        </button>
       </div>
     </div>
   </body>
